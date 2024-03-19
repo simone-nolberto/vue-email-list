@@ -13,8 +13,8 @@
 
         <button @click="generateRandomEmail">Genera Email</button>
 
-        <ul >
-            <li v-if="check == true" v-for="email in randomEmailList">{{email}}</li>
+        <ul v-if="check == true">
+            <li  v-for="email in randomEmailList">{{email}}</li>
         </ul>
     </div>
 

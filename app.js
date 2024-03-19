@@ -17,7 +17,8 @@ createApp({
                     .then((response) => {
                         // console.log(response.data.response);
                         this.randomEmailList.push(response.data.response);
-                        console.log(this.randomEmailList.length);
+                        // console.log(this.randomEmailList);
+                        // console.log(this.randomEmailList.length);
                         if (this.randomEmailList.length === 10) {
 
                             this.check = true;
