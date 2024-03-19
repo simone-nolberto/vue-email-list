@@ -6,6 +6,7 @@ createApp({
         return {
 
             randomEmailList: [],
+            check: false,
         }
     },
     methods: {
@@ -14,14 +15,31 @@ createApp({
                 axios
                     .get('https://flynn.boolean.careers/exercises/api/random/mail')
                     .then((response) => {
-                        console.log(response.data.response);
+                        // console.log(response.data.response);
                         this.randomEmailList.push(response.data.response);
-    
+                        console.log(this.randomEmailList.length);
+                        if (this.randomEmailList.length === 10) {
+
+                            this.check = true;
+                            console.log(this.check);
+
+                        } else {
+                            this.check = false;
+                        }
+
                     });
+
+
             };
-            
-            console.log(this.randomEmailList);
+
+
+
+
+
         }
 
-    }
+    },
+    // mounted(){
+    //     console.log(this.check);
+    // }
 }).mount('#app')

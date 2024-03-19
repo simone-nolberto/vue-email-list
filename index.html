@@ -12,8 +12,9 @@
     <div id="app">
 
         <button @click="generateRandomEmail">Genera Email</button>
-        <ul>
-            <li v-for="email in randomEmailList">{{email}}</li>
+
+        <ul >
+            <li v-if="check == true" v-for="email in randomEmailList">{{email}}</li>
         </ul>
     </div>
 
